@@ -1,0 +1,27 @@
+* {
+    font-family: "Helvetica", "Arial", sans-serif;
+}
+
+.content-container {
+    display: flex;
+}
+
+.body {
+    margin-top: 0px;
+    margin-left: 0px;
+
+}
+
+.left-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    border: 2px solid blue;
+    width: 100vw;
+    padding: 0px;
+    margin: 0px;
+    background-image: url("images/gg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
