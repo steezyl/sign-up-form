@@ -40,22 +40,31 @@
                     <div class="form-row2">
                         <div id="email-input">
                             <label for="email">Email</label>
-                            <input id="email" name="email" type="email" placeholder="joe@example.com" required >
+                            <input id="email" name="email" type="email" placeholder="joe@example.com" >
                         </div>
                         <div id="phone">
                             <label for="phone-number">Phone Number</label>
-                            <input id="phone-number" name="phone-number" pattern="(\d{10})" type="text" placeholder="0412345678">
+                            <input id="phone-number" name="phone-number" pattern="^\({0,1}((0|\+61)(2|4|3|7|8)){0,1}\){0,1}( |-){0,1}[0-9]{2}( |-){0,1}[0-9]{2}( |-){0,1}[0-9]{1}( |-){0,1}[0-9]{3}$" type="text" placeholder="0412345678">
                         </div>
                     </div>
                     <div class="form-row3">
                         <div id="password1">
                             <label for="password">Password</label>
-                            <input id="password" name="password" type="password">
+                            <input id="password" name="password" type="password" onkeyup='requirements();' pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" >
                         </div>
                         <div id="password2">
                             <label for="confirm-password">Confirm Password</label>
-                            <input id="confirm-password" name="confirm-password" type="password">
+                            <input id="confirm-password" name="confirm-password" type="password" onkeyup='check();'>
                         </div>
+                    </div>
+                    <div class="form-row4">
+                        <span id="password-requirements">
+                            <div id="8letters"></div>
+                            <div id="capital"></div>
+                            <div id="number"></div>
+                            <div id="special"></div>
+                        </span>
+                        <span id="message"></span>
                     </div>
                 </div>
             </div>
